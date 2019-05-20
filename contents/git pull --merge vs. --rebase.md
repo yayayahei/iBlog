@@ -1,0 +1,4 @@
+# git pull --merge vs. --rebase
+git pull is shorthand for git fetch, git merge.
+git pull default option is --merge, it will create a new commit resulting from three-way merge from comment ancestor & last commit of current branch & last commit of remote branch.
+There is another way to merge, using --rebase option. The theory is rebase the current branch on top of the upstream branch after fetching. After fetching remote code, save the patch of every commit of local change to temp files, resetting the current branch to the same commit as the branch you are rebasing onto, and finally applying each change in turn.
